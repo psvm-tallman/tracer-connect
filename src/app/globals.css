@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;500;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.rdp-vhidden {
+  @apply hidden;
+}
+
+.embla {
+  overflow: hidden;
+}
+
+.embla__container {
+  display: flex;
+}
+
+.embla__slide {
+  flex: 0 0 50%;
+  min-width: 0;
+  padding: 0 20px;
+}
+
+@media (max-width: 1083px) {
+  .embla__slide {
+    flex: 0 0 100%;
+    min-width: 0;
+    padding: 0 20px;
+  }
+}
+
+.btn-gradient-border {
+  @apply px-8 py-2 rounded-lg transition-all duration-500 ease-in-out;
+  color: rgb(255,255,255);
+  background-origin: border-box;
+  background-clip: padding-box,border-box;
+}
+
+.btn-gradient-border:hover {
+  box-shadow: rgba(111,76,255,0.5) 0px 0px 20px 0px;
+}
+
+@layer base {
+  :root {
+    --chart-1: 221.2 83.2% 53.3%;
+    --chart-2: 212 95% 68%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer components {
+  .title {
+    @apply font-poppins font-bold tracking-wide text-[clamp(48px,3vw,46px)];
+  }
+
+  .h1-b {
+    @apply font-poppins font-bold tracking-wide text-[clamp(30px,3vw,36px)];
+  }
+
+  .h1-s {
+    @apply font-poppins font-semibold tracking-wide text-[clamp(30px,3vw,36px)];
+  }
+
+  .h2-b {
+    @apply font-bold font-poppins tracking-wide  text-[clamp(24px,3vw,32px)];
+  }
+
+  .h2-s {
+    @apply font-poppins font-semibold text-[clamp(24px,3vw,28px)];
+  }
+
+  .h5-s {
+    @apply font-lato font-semibold tracking-wide text-[clamp(18px,3vw,20px)];
+  }
+
+  .h5-m {
+    @apply font-lato font-medium  text-[clamp(18px,3vw,20px)];
+  }
+
+  .h6-s {
+    @apply font-lato font-semibold  text-[clamp(16px,3vw,16px)];
+  }
+
+  .h6-m {
+    @apply font-lato font-medium text-[clamp(16px,3vw,16px)];
+  }
+
+  .text-m {
+    @apply font-lato font-medium  text-[clamp(12px,3vw,14px)];
+  }
+
+  .text-r {
+    @apply  font-lato font-normal tracking-wide text-[clamp(12px,3vw,14px)];
+  }
+}
